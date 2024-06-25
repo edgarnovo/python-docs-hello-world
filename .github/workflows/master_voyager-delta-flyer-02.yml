@@ -7,7 +7,7 @@ name: Build and deploy Python app to Azure Web App - voyager-delta-flyer-02
 on:
   push:
     branches:
-      - master
+      - staging
   workflow_dispatch:
 
 jobs:
@@ -73,6 +73,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'voyager-delta-flyer-02'
+          app-name: 'voyager-delta-flyer-02/staging'
           slot-name: 'Production'
           
